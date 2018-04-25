@@ -159,12 +159,14 @@
   <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
+  <script src="helper.js"></script>
   <script id="cart-template" type="text/x-handlebars-template">
     {{#each carts}}
-    <div>{{name}} - ${{price}}</div>
+    <div><i class="btn-remove fa fa-times"></i><span>{{name}}</span>{{#ifCond count 1}}({{count}}) {{/ifCond}} - <span>${{price}}</span></div>
     {{/each}}
   </script>
   <script type="text/javascript" src="script.js"></script>
+  <script src="feature.js"></script>
 </body>
 
 </html>
